@@ -1,0 +1,178 @@
+.track-history {
+    min-height: 100vh;
+    padding: 13px;
+    padding-top: 60px;
+    background-color: #fafaff;
+    overflow: hidden;
+    color: #3d1a56;
+    font-size: 17px;
+}
+
+.track-history span b {
+    font-size: 20px;
+}
+
+.track-history__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.searchBar {
+    width: min-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+    display: flex;
+    border: solid 1px #e28081;
+    border-radius: 577px;
+    overflow: hidden;
+}
+
+.searchBar__input--placeholder {
+    padding: 3px 13px;
+    border-style: none;
+}
+
+.searchBar__input--placeholder:hover {
+    outline: none;
+}
+
+.searchBar :nth-child(1) {
+    width: calc(16ch + 13px * 2);
+}
+
+.searchBar :nth-child(2) {
+    width: calc(5ch + 13px * 2);
+
+}
+
+.searchBar :nth-child(3) {
+    border-style: none;
+    width: min-content;
+    padding: 3px 13px;
+    background-color: #e28081;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff2f2;
+    cursor: pointer;
+}
+
+/*===== state bar =====*/
+.stateBar {
+    width: 100%;
+    position: relative;
+    top: 17px;
+    --animation-duration: 1s;
+
+}
+
+.stateBar__startPoint--smallCircle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 13.5px;
+
+    background-color: #3d1a56;
+    border-radius: 77px;
+    z-index: 100;
+}
+
+.stateBar__line--maxWidth {
+    width: 98%;
+    height: 10px;
+    position: absolute;
+    top: 18.5px;
+    left: 1%;
+    background-image: linear-gradient(to left, #fafaff 50%, #3d1a56 50%);
+    background-size: 200%;
+    background-position: 100%;
+    animation: line-load var(--animation-duration) .5s forwards linear;
+}
+
+.stateBar__number {
+    width: 47px;
+    height: 47px;
+    padding: 7px;
+
+    position: absolute;
+    background-color: #f4bdd2;
+    border-radius: 77px;
+}
+
+.stateBar__1 {
+    right: 75%;
+    animation: circle-load 125ms .625s forwards;
+}
+
+.stateBar__2 {
+    right: 50%;
+    animation: circle-load 125ms .875s forwards;
+}
+
+.stateBar__3 {
+    right: 25%;
+    animation: circle-load 125ms 1.125s forwards;
+}
+
+.stateBar__4 {
+    right: 0;
+    animation: circle-load 125ms 1.375s forwards;
+}
+
+@keyframes line-load {
+    from {
+        background-position: 100%;
+    }
+
+    to {
+        background-position: 0;
+    }
+}
+
+@keyframes circle-load {
+    from {
+        box-shadow: 0px 0px 0px 5px #fff;
+    }
+
+    to {
+        box-shadow: 0px 0px 0px 5px #3d1a56;
+    }
+
+}
+
+.track-history__my-products {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 7px;
+
+    font-size: 24px;
+    outline: solid 1px #e8bebf;
+    border-radius: 7px;
+    color: #bc3e40;
+}
+
+.my-product {
+    background-color: #f0e5e9;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 3px 7px;
+    margin-bottom: 7px;
+}
+
+.my-product :nth-child(1) {
+    margin: 0;
+    font-size: 17px;
+}
+
+.my-product :nth-child(2) {
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.my-product span {
+    margin-top: -5px;
+    font-weight: 700;
+    margin: 0 5px;
+}

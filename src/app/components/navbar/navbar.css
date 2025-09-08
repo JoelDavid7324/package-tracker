@@ -1,0 +1,18 @@
+.navbar {
+    width: 100%;
+    padding: 7px 13px;
+
+    position: fixed;
+    background-color: #3d1a56;
+    /* --clr-nav-cont: #ffffff;
+    color: var(--clr-nav-cont);
+    font-size: 37px; */
+    display: grid;
+    grid-template-columns: auto min-content min-content;
+    gap: 17px;
+}
+
+.navbar svg {
+    height: 36px;
+    width: 36px;
+}
