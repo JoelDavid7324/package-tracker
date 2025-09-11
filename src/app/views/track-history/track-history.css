@@ -96,28 +96,43 @@
     padding: 7px;
 
     position: absolute;
-    background-color: #f4bdd2;
+    background-image: linear-gradient(to right, #f4bdd2, #3a1157);
+    background-size: 777% 100%;
     border-radius: 77px;
 }
 
 .stateBar__1 {
     right: 75%;
-    animation: circle-load 125ms .625s forwards;
+    animation: circle-load, circle-bg-filled paused;
+    animation-duration: 125ms;
+    animation-delay: .625s;
+    animation-fill-mode: forwards;
+
 }
 
 .stateBar__2 {
     right: 50%;
-    animation: circle-load 125ms .875s forwards;
+    animation: circle-load, circle-bg-filled paused;
+    animation-duration: 125ms;
+    animation-delay: .875s;
+    animation-fill-mode: forwards;
 }
 
 .stateBar__3 {
     right: 25%;
-    animation: circle-load 125ms 1.125s forwards;
+    animation: circle-load, circle-bg-filled paused;
+    animation-duration: 125ms;
+    animation-delay: 1.125s;
+    animation-fill-mode: forwards;
+
 }
 
 .stateBar__4 {
     right: 0;
-    animation: circle-load 125ms 1.375s forwards;
+    animation: circle-load, circle-bg-filled paused;
+    animation-duration: 125ms;
+    animation-delay: 1.375s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes line-load {
@@ -127,6 +142,16 @@
 
     to {
         background-position: 0;
+    }
+}
+
+@keyframes circle-bg-filled {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 100%;
     }
 }
 

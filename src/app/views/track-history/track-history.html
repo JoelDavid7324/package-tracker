@@ -14,7 +14,7 @@
         <div class="stateBar__startPoint--smallCircle"></div>
         <div class="stateBar__line--maxWidth"></div>
         <div class="stateBar__number stateBar__1"
-            [ngStyle]="{'background-color': indexOfLastState() >= 0 ? '#3a1157':'#f2d9d9'}">
+            [ngStyle]="{'animation-play-state': indexOfLastState() >= 0 ? 'running':''}">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -35,7 +35,7 @@
             </svg>
         </div>
         <div class="stateBar__number stateBar__2"
-            [ngStyle]="{'background-color': indexOfLastState() >= 1 ? '#3a1157':'#f2d9d9'}">
+            [ngStyle]="{'animation-play-state': indexOfLastState() >= 1 ? 'running':''}">
             <svg fill="#fff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" stroke="#fff">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -80,7 +80,7 @@
             </svg>
         </div>
         <div class="stateBar__number stateBar__3"
-            [ngStyle]="{'background-color': indexOfLastState() >= 2 ? '#3a1157':'#f2d9d9'}">
+            [ngStyle]="{'animation-play-state': indexOfLastState() >= 2 ? 'running':''}">
             <svg fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 612.001 612.001" xml:space="preserve"
                 stroke="#fff">
@@ -96,7 +96,7 @@
             </svg>
         </div>
         <div class="stateBar__number stateBar__4"
-            [ngStyle]="{'background-color': indexOfLastState() >= 3 ? '#3a1157':'#f2d9d9'}">
+            [ngStyle]="{'animation-play-state': indexOfLastState() >= 3 ? 'running':''}">
             <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 612 612" xml:space="preserve" stroke="#ffffff">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>

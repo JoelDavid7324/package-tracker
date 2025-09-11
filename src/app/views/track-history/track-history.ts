@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TrackHistory {
   update: Signal<ProductUpdate[]>
-  product_id = signal('prod-001')
+  product_id = signal('prod-002')
   product = computed(() => this.productService.findByID(this.product_id()))
 
   main_states = new Set([
