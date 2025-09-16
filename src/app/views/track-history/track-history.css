@@ -13,7 +13,7 @@
 }
 
 .track-history__title {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 700;
     margin-bottom: 24px;
 }
@@ -32,6 +32,7 @@
 .searchBar__input--placeholder {
     padding: 3px 13px;
     border-style: none;
+    font-size: 14px;
 }
 
 .searchBar__input--placeholder:hover {
@@ -39,20 +40,24 @@
 }
 
 .searchBar :nth-child(1) {
-    width: calc(16ch + 13px * 2);
+    width: calc(17ch + 13px * 2);
+    border-top-left-radius: 577px;
+    border-bottom-left-radius: 577px;
 }
 
 .searchBar :nth-child(2) {
-    width: calc(5ch + 13px * 2);
-
+    width: calc(7ch + 13px * 2);
 }
 
 .searchBar :nth-child(3) {
     border-style: none;
+    height: 30px;
     width: min-content;
     padding: 3px 13px;
     background-color: #e28081;
+
     font-weight: 700;
+    font-size: 15px;
     letter-spacing: 1px;
     color: #fff2f2;
     cursor: pointer;
@@ -97,7 +102,7 @@
 
     position: absolute;
     background-image: linear-gradient(to right, #f4bdd2, #3a1157);
-    background-size: 777% 100%;
+    background-size: 777% 110%;
     border-radius: 77px;
 }
 
@@ -161,12 +166,12 @@
     }
 
     to {
-        box-shadow: 0px 0px 0px 5px #3d1a56;
+        box-shadow: 0px 0px 0px 5px #3d1a56, inset 0px 0px 0px 0.5px #3d1a56;
     }
 
 }
 
-.track-history__my-products {
+.track-history__my-updates {
     width: 90%;
     margin: 0 auto;
     margin-top: 100px;
@@ -178,7 +183,7 @@
     color: #bc3e40;
 }
 
-.my-product {
+.update {
     background-color: #f0e5e9;
     font-size: 18px;
     border-radius: 5px;
@@ -186,17 +191,17 @@
     margin-bottom: 7px;
 }
 
-.my-product :nth-child(1) {
+.update :nth-child(1) {
     margin: 0;
     font-size: 17px;
 }
 
-.my-product :nth-child(2) {
+.update :nth-child(2) {
     font-size: 21px;
     font-weight: 900;
 }
 
-.my-product span {
+.update span {
     margin-top: -5px;
     font-weight: 700;
     margin: 0 5px;

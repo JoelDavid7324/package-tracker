@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<section class="product-list">
+    <h3 class="product-list__title">Productos</h3>
+    <div class="product-list__products">
+        @for (p of productsArray(); track p.id) {
+        @if (p.id) {
+        <article (click)="captureProduct(p)" class="product">
+            <div class="product__picture"></div>
+            <h4 class="product__title">{{p.id}}</h4>
+            <span class="product__state">{{p.origin_country}}</span>
+        </article>
+        }
+        }
+    </div>
+</section>

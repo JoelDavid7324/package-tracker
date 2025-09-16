@@ -37,7 +37,7 @@ export class ProductService {
         ])
     }
 
-    findByID(id: string): Product | any {
-        return this.product().find(p => p.id === id);
+    getProducts(): Product[] | any {
+        return this.product()
     }
 }

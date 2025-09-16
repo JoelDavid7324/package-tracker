@@ -111,11 +111,11 @@
             </svg>
         </div>
     </div>
-    <div class="track-history__my-products">
+    <div class="track-history__my-updates">
         Historial
         @for (pu of update(); track pu.id) {
-        <article class="my-product">
-            <span>{{pu.date}}</span>
+        <article class="update">
+            <span>{{pu.date.slice(0, 10)}}</span>
             <h4>{{pu.state}}</h4>
             De <span>{{pu.from}}</span> a <span>{{pu.to}}</span>
         </article>

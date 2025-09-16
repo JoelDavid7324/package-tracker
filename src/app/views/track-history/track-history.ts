@@ -4,6 +4,7 @@ import { ProductService } from './products.service';
 import { ProductUpdateService } from './products-updates.service';
 import { ProductUpdate } from './product-update.adapter';
 import { CommonModule } from '@angular/common';
+import { TargetProduct } from '../product-list/target-product.service';
 
 @Component({
   selector: 'app-track-history',
@@ -13,8 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class TrackHistory {
   update: Signal<ProductUpdate[]>
-  product_id = signal('prod-002')
-  product = computed(() => this.productService.findByID(this.product_id()))
+  product = computed(() => this.targetProduct.getProductOnTarget())
 
   main_states = new Set([
     'Recepción',
@@ -24,7 +24,7 @@ export class TrackHistory {
   ]);
 
   getLastState = computed(() => {
-    const updates = this.productUpdateService.findByProduct(this.product_id());
+    const updates = this.productUpdateService.findByProduct(this.product().id);
     const main_ofProducts = updates.filter((u: { state: string; }) => this.main_states.has(u.state));
 
     if (main_ofProducts.length === 0) return null;
@@ -41,9 +41,8 @@ export class TrackHistory {
     const statesArray = Array.from(this.main_states);
     return statesArray.indexOf(ls);
   })
-  constructor(private productService: ProductService, private productUpdateService: ProductUpdateService) {
-    this.update = computed(() => this.productUpdateService.findByProduct(this.product_id()))
-    console.log('El ultimo estado es ', this.getLastState())
+  constructor(private productService: ProductService, private productUpdateService: ProductUpdateService, private targetProduct: TargetProduct) {
+    this.update = computed(() => this.productUpdateService.findByProduct(this.product().id))
+    console.log('update', this.update())
   }
-
 }
