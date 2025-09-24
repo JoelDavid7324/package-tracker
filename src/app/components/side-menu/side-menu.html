@@ -1,9 +1,9 @@
-<div class="side-menu__container">
+<div class="side-menu__container" [ngStyle]="{'display': getSideMenuStatus() ? 'flex':'none'}">
     <section class="side-menu__nav">
         <article class="side-menu__goto side-menu__goto--home">Inicio</article>
         <article class="side-menu__goto side-menu__goto--my-products">Productos</article>
         <article class="side-menu__goto side-menu__goto--new-order">Agregar pedido</article>
         <article class="side-menu__goto side-menu__goto--contact-us">Contacto</article>
     </section>
-    <div class="side-menu__exit"></div>
+    <div class="side-menu__exit" (click)="setSideMenuStatus()"></div>
 </div>
