@@ -1,23 +1,20 @@
 .side-menu__container {
-    width: 100%;
+    width: 200%;
     height: 100%;
     position: fixed;
     z-index: 1000;
+    display: flex;
 
-    display: none;
+    transition: left 300ms, opacity 100ms 100ms, visibility 100ms 100ms;
+    opacity: 0;
+    visibility: hidden;
     left: -100%;
 }
 
-@keyframes side-menu_in {
-    from {
-        display: none;
-        left: -100%;
-    }
-
-    to {
-        display: flex;
-        left: 0;
-    }
+.side-menu__container.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 

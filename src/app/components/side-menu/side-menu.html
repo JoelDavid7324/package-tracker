@@ -1,4 +1,4 @@
-<div class="side-menu__container" [ngStyle]="{'display': getSideMenuStatus() ? 'flex':'none'}">
+<div class="side-menu__container" [class.active]="getSideMenuStatus()">
     <section class="side-menu__nav">
         <article class="side-menu__goto side-menu__goto--home">Inicio</article>
         <article class="side-menu__goto side-menu__goto--my-products">Productos</article>
