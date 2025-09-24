@@ -5,10 +5,14 @@ import { ProductUpdateService } from './products-updates.service';
 import { ProductUpdate } from './product-update.adapter';
 import { CommonModule } from '@angular/common';
 import { TargetProduct } from '../product-list/target-product.service';
+import { Step1Svg } from "./svg/step1-svg/step1-svg";
+import { Step2Svg } from "./svg/step2-svg/step2-svg";
+import { Step4Svg } from "./svg/step4-svg/step4-svg";
+import { Step3Svg } from "./svg/step3-svg/step3-svg";
 
 @Component({
   selector: 'app-track-history',
-  imports: [Navbar, CommonModule],
+  imports: [Navbar, CommonModule, Step1Svg, Step2Svg, Step4Svg, Step3Svg],
   templateUrl: './track-history.html',
   styleUrl: './track-history.css'
 })

@@ -12,7 +12,7 @@
     gap: 17px;
 }
 
-.navbar svg {
+.navbar__child {
     height: 36px;
     width: 36px;
 }
