@@ -1,18 +1,24 @@
 .navbar {
     width: 100%;
-    padding: 7px 13px;
+    padding: 7px 5px;
 
     position: fixed;
-    background-color: #3d1a56;
+    background-color: var(--primary-color);
     /* --clr-nav-cont: #ffffff;
     color: var(--clr-nav-cont);
     font-size: 37px; */
     display: grid;
     grid-template-columns: auto min-content min-content;
-    gap: 17px;
+    column-gap: 17px;
+    top: -1px;
+    z-index: 1000;
 }
 
 .navbar__child {
-    height: 36px;
-    width: 36px;
+    height: 43px;
+    aspect-ratio: 1/1;
+}
+
+.navbar__child:nth-child(1) {
+    z-index: 1200;
 }

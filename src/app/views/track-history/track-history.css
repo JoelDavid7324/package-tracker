@@ -1,38 +1,61 @@
 .track-history {
     min-height: 100vh;
-    padding: 13px;
-    padding-top: 60px;
-    background-color: #fafaff;
+    top: 48px;
+    background-color: var(--white-variation);
     overflow: hidden;
-    color: #3d1a56;
-    font-size: 17px;
+    color: var(--primary-color);
+    position: relative;
 }
 
-.track-history span b {
-    font-size: 20px;
+
+.track-history__top-background--darkBlue {
+    width: 100%;
+    top: 0;
+    padding-bottom: 60px;
+    position: relative;
+
+    color: var(--white-variation);
+    background-color: var(--primary-color);
+    z-index: 0;
+}
+
+
+.track-history__top-background--darkBlue span {
+    font-size: 17px;
+    line-height: 20px;
+
+    margin-left: 13px;
+    position: absolute;
+
 }
 
 .track-history__title {
+    padding-top: 7px;
+    margin-bottom: 27px;
+    margin-left: 13px;
+
     font-size: 27px;
     font-weight: 700;
-    margin-bottom: 24px;
+
+    user-select: none;
 }
 
 .searchBar {
-    width: min-content;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    height: 37px;
+    margin: 0 13px;
+    margin-bottom: 33px;
 
     display: flex;
-    border: solid 1px #e28081;
-    border-radius: 577px;
+    /* border: solid 1px var(--secundary-color); */
+    border: solid 1px var(--secundary-color);
+    border-radius: 777px;
     overflow: hidden;
 }
 
 .searchBar__input--placeholder {
     padding: 3px 13px;
     border-style: none;
-    font-size: 14px;
+    font-size: 17px;
 }
 
 .searchBar__input--placeholder:hover {
@@ -40,70 +63,76 @@
 }
 
 .searchBar :nth-child(1) {
-    width: calc(17ch + 13px * 2);
+    width: 50%;
     border-top-left-radius: 577px;
     border-bottom-left-radius: 577px;
 }
 
 .searchBar :nth-child(2) {
-    width: calc(7ch + 13px * 2);
+    width: 25%;
 }
 
 .searchBar :nth-child(3) {
     border-style: none;
-    height: 30px;
-    width: min-content;
+    height: 100%;
+    width: 25%;
     padding: 3px 13px;
-    background-color: #e28081;
+    background-color: var(--secundary-color);
 
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 1px;
-    color: #fff2f2;
+    color: var(--white-variation);
     cursor: pointer;
 }
 
 /*===== state bar =====*/
 .stateBar {
-    width: 100%;
-    position: relative;
-    top: 17px;
-    --animation-duration: 1s;
+    position: absolute;
+    --state-bar-height: 60px;
+    --state-bar-margin-right: 5px;
+    height: var(--state-bar-height);
+    width: calc(100% - 5px);
+    bottom: -30px;
+    padding: 0 5px;
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
 
+    --animation-duration: 1s;
 }
 
 .stateBar__startPoint--smallCircle {
     width: 20px;
     height: 20px;
-    position: absolute;
-    top: 13.5px;
-
-    background-color: #3d1a56;
+    background-color: var(--secundary-color);
     border-radius: 77px;
     z-index: 100;
 }
 
 .stateBar__line--maxWidth {
-    width: 98%;
+    width: 93%;
     height: 10px;
     position: absolute;
-    top: 18.5px;
-    left: 1%;
-    background-image: linear-gradient(to left, #fafaff 50%, #3d1a56 50%);
+    left: 10px;
+    background-image: linear-gradient(to left, var(--white-variation) 50%, var(--secundary-color) 50%);
     background-size: 200%;
     background-position: 100%;
     animation: line-load var(--animation-duration) .5s forwards linear;
+    z-index: 99;
 }
 
 .stateBar__number {
-    width: 47px;
-    height: 47px;
+    height: 100%;
+    aspect-ratio: 1/1;
     padding: 7px;
 
     position: absolute;
-    background-image: linear-gradient(to right, #f4bdd2, #3a1157);
+    border: solid 4px var(--secundary-color-light);
+    background-image: linear-gradient(to right, var(--secundary-color-light) 40%, var(--secundary-color) 60%);
     background-size: 777% 110%;
     border-radius: 77px;
+    z-index: 150;
 }
 
 .stateBar__1 {
@@ -162,43 +191,49 @@
 
 @keyframes circle-load {
     from {
-        box-shadow: 0px 0px 0px 5px #fff;
+        border: solid 4px var(--white-variation);
     }
 
     to {
-        box-shadow: 0px 0px 0px 5px #3d1a56, inset 0px 0px 0px 0.5px #3d1a56;
+        box-shadow: inset 0px 0px 0px 1px var(--secundary-color);
+        border: solid 4px var(--secundary-color);
     }
 
 }
 
 .track-history__my-updates {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
-    padding: 7px;
+    margin-top: 40px;
+    padding: 13px;
 
-    font-size: 24px;
-    outline: solid 1px #e8bebf;
+    font-size: 30px;
+    /* outline: solid 1px var(--primary-color-light); */
     border-radius: 7px;
-    color: #bc3e40;
+    color: var(--primary-color);
+}
+
+.track-history__my-updates :nth-child(1) {
+    margin-top: 17px;
 }
 
 .update {
-    background-color: #f0e5e9;
-    font-size: 18px;
-    border-radius: 5px;
+    border-left: 3px solid var(--secundary-color);
+    font-size: 17px;
+    /* border-radius: 5px; */
     padding: 3px 7px;
-    margin-bottom: 7px;
+    margin-bottom: 23px;
 }
 
 .update :nth-child(1) {
     margin: 0;
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .update :nth-child(2) {
-    font-size: 21px;
-    font-weight: 900;
+    font-size: 16px;
+    margin-left: 0px;
 }
 
 .update span {

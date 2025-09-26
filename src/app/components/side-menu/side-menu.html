@@ -1,7 +1,8 @@
 <div class="side-menu__container" [class.active]="getSideMenuStatus()">
     <section class="side-menu__nav">
-        <article class="side-menu__goto side-menu__goto--home">Inicio</article>
-        <article class="side-menu__goto side-menu__goto--my-products">Productos</article>
+        <article class="side-menu__goto side-menu__close" (click)="setSideMenuStatus()">Volver</article>
+        <article class="side-menu__goto side-menu__goto--home" (click)="gotoHome()">Inicio</article>
+        <article class="side-menu__goto side-menu__goto--my-products" (click)="gotoProducts()">Productos</article>
         <article class="side-menu__goto side-menu__goto--new-order">Agregar pedido</article>
         <article class="side-menu__goto side-menu__goto--contact-us">Contacto</article>
     </section>

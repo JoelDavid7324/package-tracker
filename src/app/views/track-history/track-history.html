@@ -1,43 +1,49 @@
 <app-navbar></app-navbar>
 
 <section class="track-history">
-    <h3 class="track-history__title">Rastreador de Mercancías</h3>
-    <div class="searchBar items-center">
-        <input class="searchBar__input--placeholder" type="text" name="id" placeholder="Inserte un id">
-        <input class="searchBar__input--placeholder" type="number" name="date" placeholder="Año">
-        <input type="button" value="Buscar">
-    </div>
-    @if (product()) {
-    <span>País de Origen <b>{{product().origin_country}}</b></span>
-    }
-    <div class="stateBar">
-        <div class="stateBar__startPoint--smallCircle"></div>
-        <div class="stateBar__line--maxWidth"></div>
-        <div class="stateBar__number stateBar__1"
-            [ngStyle]="{'animation-play-state': indexOfLastState() >= 0 ? 'running':''}">
-            <app-step1-svg />
+    <div class="track-history__top-background--darkBlue">
+        <h3 class="track-history__title">Rastreador de Mercancías</h3>
+        <div class="searchBar items-center">
+            <input class="searchBar__input--placeholder" type="text" name="id" placeholder="Inserte un id">
+            <input class="searchBar__input--placeholder" type="number" name="date" placeholder="Año">
+            <input type="button" value="Buscar">
         </div>
-        <div class="stateBar__number stateBar__2"
-            [ngStyle]="{'animation-play-state': indexOfLastState() >= 1 ? 'running':''}">
-            <app-step2-svg />
-        </div>
-        <div class="stateBar__number stateBar__3"
-            [ngStyle]="{'animation-play-state': indexOfLastState() >= 2 ? 'running':''}">
-            <app-step3-svg />
-        </div>
-        <div class="stateBar__number stateBar__4"
-            [ngStyle]="{'animation-play-state': indexOfLastState() >= 3 ? 'running':''}">
-            <app-step4-svg />
+        @if (product()) {
+        <span>País de Origen <b>{{product().origin_country}}</b></span>
+        }
+        <div class="stateBar">
+            <div class="stateBar__startPoint--smallCircle"></div>
+            <div class="stateBar__line--maxWidth"></div>
+            <div class="stateBar__number stateBar__1"
+                [ngStyle]="{'animation-play-state': indexOfLastState() >= 0 ? 'running':''}">
+                <app-step1-svg />
+            </div>
+            <div class="stateBar__number stateBar__2"
+                [ngStyle]="{'animation-play-state': indexOfLastState() >= 1 ? 'running':''}">
+                <app-step2-svg />
+            </div>
+            <div class="stateBar__number stateBar__3"
+                [ngStyle]="{'animation-play-state': indexOfLastState() >= 2 ? 'running':''}">
+                <app-step3-svg />
+            </div>
+            <div class="stateBar__number stateBar__4"
+                [ngStyle]="{'animation-play-state': indexOfLastState() >= 3 ? 'running':''}">
+                <app-step4-svg />
+            </div>
         </div>
     </div>
     <div class="track-history__my-updates">
         Historial
-        @for (pu of update(); track pu.id) {
+        @if (update()) {
+        @for (pu of update().reverse(); track pu.id) {
         <article class="update">
-            <span>{{pu.date.slice(0, 10)}}</span>
             <h4>{{pu.state}}</h4>
-            De <span>{{pu.from}}</span> a <span>{{pu.to}}</span>
+            <span>{{pu.date.slice(0, 10)}}</span>
+            <p>De <span>{{pu.from}}</span> a <span>{{pu.to}}</span></p>
         </article>
+        }
+        }@else {
+        <span>Nada que mostrar</span>
         }
     </div>
 </section>

@@ -5,4 +5,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    --primary-color: #022138;
+    --secundary-color: #fb9000;
+    --primary-color-light: #ebf1f4;
+    --secundary-color-light: #f0ede5;
+    --white-variation: #fafaff;
 }
