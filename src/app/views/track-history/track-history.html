@@ -33,12 +33,11 @@
         </div>
     </div>
     <div class="track-history__my-updates">
-        Historial
+        <h3>Historial</h3>
         @if (update()) {
         @for (pu of update().reverse(); track pu.id) {
         <article class="update">
-            <h4>{{pu.state}}</h4>
-            <span>{{pu.date.slice(0, 10)}}</span>
+            <h4>{{pu.state}}</h4><span class="update__date--opacity">{{pu.date.slice(0, 10)}}</span>
             <p>De <span>{{pu.from}}</span> a <span>{{pu.to}}</span></p>
         </article>
         }
