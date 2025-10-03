@@ -1,6 +1,6 @@
 .track-history {
     min-height: 100vh;
-    top: 48px;
+    top: 55px;
     background-color: var(--white-variation);
     overflow: hidden;
     color: var(--primary-color);
@@ -30,8 +30,8 @@
 }
 
 .track-history__title {
-    padding-top: 7px;
-    margin-bottom: 27px;
+    padding-top: 10px;
+    margin-bottom: 24px;
     margin-left: 13px;
 
     font-size: 27px;

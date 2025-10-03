@@ -1,15 +1,15 @@
 .product-list {
     min-height: 100vh;
     padding: 13px;
-    padding-top: 60px;
+    padding-top: 55px;
     background-color: #fafaff;
     overflow: hidden;
 }
 
 .product-list__title {
-    font-size: 30px;
+    font-size: 27px;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 
 .product {

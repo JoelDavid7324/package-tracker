@@ -34,7 +34,7 @@
 
     border-radius: 777px;
     color: var(--secundary-color-light);
-    background-color: var(--secundary-color);
+    background-color: var(--primary-color);
 }
 
 .side-menu__goto {
@@ -42,8 +42,8 @@
     padding: 13px 21px;
     border-radius: 7px;
 
-    color: var(--secundary-color);
-    background-color: var(--secundary-color-light);
+    color: var(--primary-color);
+    background-color: var(--primary-color-light);
 
     font-weight: 900;
     font-size: 20px;

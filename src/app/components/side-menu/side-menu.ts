@@ -26,4 +26,8 @@ export class SideMenu {
     this.side_menu_service.setSideMenuStatus()
     this.router.navigate([''])
   }
+  gotoNewOrder() {
+    this.side_menu_service.setSideMenuStatus()
+    this.router.navigate(['new-product'])
+  }
 }

@@ -4,9 +4,7 @@
 
     position: fixed;
     background-color: var(--primary-color);
-    /* --clr-nav-cont: #ffffff;
-    color: var(--clr-nav-cont);
-    font-size: 37px; */
+
     display: grid;
     grid-template-columns: auto min-content min-content;
     column-gap: 17px;
