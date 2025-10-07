@@ -3,8 +3,11 @@
 <div class="home__container">
     <section class="home__wellcome-view">
         <h1>Packuba</h1>
-        <article>Sientes ganas de alcanzar esos productos con los que siempre has soñado, permite que nosotros los
-            llevemos desde las estenterías hasta tus manos...</article>
+        <div class="welcome-view__first-article--animated">¿Lo has <span>soñado</span>? Ahora lo puedes
+            <span>tener</span>
+            <div class="welcome-view__first-article--animation-in"></div>
+        </div>
+        <article>¡Todos los productos que deseas están mucho más cerca de lo que imaginas!</article>
         <span>Vamos a conocernos</span>
         <div class="home__wave home__wave1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -59,6 +62,10 @@
             </div>
         </div>
     </section>
+    <section class="home__banner home__banner--1">
+        <h4>Nuestro servicio es rápido, fácil de usar y sin complicaciones</h4>
+        <button type="button" (click)="gotoNewProduct()">Haz realidad tu sueño</button>
+    </section>
     <section class="home__opinions">
         <h4 class="opinions__title">Que dicen nuestros clientes</h4>
         <article>
@@ -87,7 +94,7 @@
         </article>
     </section>
     <section class="home__goto--new-order">
-        <button type="button">comienza ya</button>
+        <button type="button" (click)="gotoNewProduct()">Comienza ya</button>
     </section>
     <section class="home__footer">
         <article class="footer__contact">
@@ -96,9 +103,15 @@
             <span>Oficina central: La Habana, Cuba</span>
         </article>
         <article class="footer__social">
-            <a href="" class="footer__social--clickable"></a>
-            <a href="" class="footer__social--clickable"></a>
-            <a href="" class="footer__social--clickable"></a>
+            <a href="" class="footer__social--clickable">
+                <app-insta-svg></app-insta-svg>
+            </a>
+            <a href="" class="footer__social--clickable">
+                <app-whatsapp-svg></app-whatsapp-svg>
+            </a>
+            <a href="" class="footer__social--clickable">
+                <app-facebook-svg></app-facebook-svg>
+            </a>
         </article>
         <article class="footer__pol">
             <div class="footer__pol--terms-container">

@@ -1,6 +1,14 @@
 <app-navbar></app-navbar>
 <app-side-menu></app-side-menu>
 <section class="new-product__container">
-    <input type="url" name="product-url" placeholder="Inserte el link del producto">
+    <article class="new-product__top-background--orange">
+        <h4 class="new-product__title">Nueva compra</h4>
+        <p class="new-product__info">El producto pasará a la zona de confirmación y después podrá realizar el
+            prepago para confirmar el servicio.</p>
+    </article>
+    <div class="new-product__input--flex">
+        <input type="url" name="product-url" placeholder="Inserte el link del producto" [value]="copied_url()">
+        <button type="button" (click)="clipboard_plaste()">Pegar</button>
+    </div>
     <article><button type="button">Borrar</button><button type="button">Listo</button></article>
 </section>

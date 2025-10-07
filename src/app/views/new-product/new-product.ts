@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { SideMenu } from "../../components/side-menu/side-menu";
 import { Navbar } from "../../components/navbar/navbar";
 
@@ -9,5 +9,14 @@ import { Navbar } from "../../components/navbar/navbar";
   styleUrl: './new-product.css'
 })
 export class NewProduct {
+  copied_url = signal<string>('')
 
+  async clipboard_plaste() {
+    try {
+      const texto = await navigator.clipboard.readText();
+      this.copied_url.set(texto);
+    } catch (error) {
+      console.error('Error al leer el portapapeles', error);
+    }
+  }
 }
